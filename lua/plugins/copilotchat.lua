@@ -1,10 +1,20 @@
 return {
   "CopilotC-Nvim/CopilotChat.nvim",
   dependencies = {
-    "zbirenbaum/copilot.lua", -- must have copilot.lua setup and working
-    "nvim-lua/plenary.nvim",
+    { "nvim-lua/plenary.nvim", branch = "master" },
   },
-  opts = {},
+  build = "make tiktoken",
+  opts = {
+    prompts = {
+      Rename = {
+        prompt = "Please rename the variable correcttly in given selection based on context",
+        selection = function(source)
+          local select = require("CopilotChat.select")
+          return select.visual(source)
+        end,
+      },
+    },
+  },
   keys = {
     {
       "<leader>cc",
