@@ -18,7 +18,7 @@ return {
   },
   keys = {
     {
-      "<leader>cc",
+      "<leader>zc",
       function()
         require("CopilotChat").toggle()
       end,
