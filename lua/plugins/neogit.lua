@@ -11,5 +11,14 @@ return {
       },
     })
   end,
+  keys = {
+    {
+      "<leader>gg",
+      function()
+        require("neogit").open()
+      end,
+      desc = "Open Neogit",
+    },
+  },
   cmd = "Neogit",
 }
