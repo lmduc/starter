@@ -14,8 +14,8 @@ return {
       hide_during_completion = false,
       keymap = {
         accept = "<Tab>",
-        next = "<C-l>",
-        prev = "<C-h>",
+        next = "<C-]>",
+        prev = "<C-[>",
       },
     },
     panel = { enabled = false },
